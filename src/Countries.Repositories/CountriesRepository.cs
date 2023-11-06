@@ -14,11 +14,11 @@ public class CountriesRepository(CountriesDbContext countriesDbContext, ILogger<
     private readonly ILogger<CountriesRepository> _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     private readonly IMapper _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
 
-    public async Task<IReadOnlyCollection<CountryInfo>> GetAllCountries()
+    public async Task<IReadOnlyCollection<CreateCountryInfoDto>> GetAllCountries()
     {
         _logger.LogInformation($"Starting CountriesRepository::GetAllCountries()");
 
-        return await _countriesDbContext.CountriesInfo.ToListAsync();
+        return _mapper.Map<List<CreateCountryInfoDto>>(await _countriesDbContext.CountriesInfo.ToListAsync());
     }
 
     public async Task<CountryInfoDto> AddCountry(CreateCountryInfoDto createCountryInfoDto)
