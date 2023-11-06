@@ -5,5 +5,5 @@ namespace Countries.Persistence;
 
 public class CountriesDbContext(DbContextOptions<CountriesDbContext> dbContextOptions) : DbContext(dbContextOptions)
 {
-    public DbSet<CreateCountryInfoDto> CountriesInfo => Set<CreateCountryInfoDto>();
+    public DbSet<CountryInfo> CountriesInfo => Set<CountryInfo>();
 }

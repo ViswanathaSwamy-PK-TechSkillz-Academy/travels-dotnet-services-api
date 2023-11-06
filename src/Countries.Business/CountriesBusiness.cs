@@ -9,7 +9,7 @@ public class CountriesBusiness(ICountriesRepository countriesRepository, ILogger
     private readonly ICountriesRepository _countriesRepository = countriesRepository ?? throw new ArgumentNullException(nameof(countriesRepository));
     private readonly ILogger<CountriesBusiness> _logger = logger ?? throw new ArgumentNullException(nameof(logger));
 
-    public async Task<IReadOnlyCollection<CreateCountryInfoDto>> GetAllCountries()
+    public async Task<IReadOnlyCollection<CountryInfo>> GetAllCountries()
     {
         _logger.LogInformation($"Starting CountriesBusiness::GetAllCountries()");
 
