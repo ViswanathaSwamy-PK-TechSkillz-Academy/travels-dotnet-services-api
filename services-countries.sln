@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.Persistence", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.Repositories", "src\Countries.Repositories\Countries.Repositories.csproj", "{F3B4F974-FA8F-4131-85AA-C50390856DCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countries.API", "src\Countries.API\Countries.API.csproj", "{101EC4BF-ACD3-4B4C-9044-2EF18B89E688}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{F3B4F974-FA8F-4131-85AA-C50390856DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3B4F974-FA8F-4131-85AA-C50390856DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3B4F974-FA8F-4131-85AA-C50390856DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{101EC4BF-ACD3-4B4C-9044-2EF18B89E688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{101EC4BF-ACD3-4B4C-9044-2EF18B89E688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{101EC4BF-ACD3-4B4C-9044-2EF18B89E688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{101EC4BF-ACD3-4B4C-9044-2EF18B89E688}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{72D57A35-B9DE-4C90-A229-E37215F9C70E} = {34E685A9-394C-43F0-BC31-6116B85D9E6D}
 		{20E09502-CA56-417C-A46A-8D7A607FC94E} = {34E685A9-394C-43F0-BC31-6116B85D9E6D}
 		{F3B4F974-FA8F-4131-85AA-C50390856DCE} = {34E685A9-394C-43F0-BC31-6116B85D9E6D}
+		{101EC4BF-ACD3-4B4C-9044-2EF18B89E688} = {34E685A9-394C-43F0-BC31-6116B85D9E6D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {408F98D5-3493-42C1-866E-D1B6D5E1BC0C}

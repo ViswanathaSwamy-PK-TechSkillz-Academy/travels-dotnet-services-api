@@ -4,17 +4,10 @@ using Microsoft.Extensions.Logging;
 
 namespace Countries.Business;
 
-public class CountriesBusiness : ICountriesBusiness
+public class CountriesBusiness(ICountriesRepository countriesRepository, ILogger<CountriesBusiness> logger) : ICountriesBusiness
 {
-    private readonly ICountriesRepository _countriesRepository;
-    private readonly ILogger<CountriesBusiness> _logger;
-
-    public CountriesBusiness(ICountriesRepository countriesRepository, ILogger<CountriesBusiness> logger)
-    {
-        _countriesRepository = countriesRepository ?? throw new ArgumentNullException(nameof(countriesRepository));
-
-        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-    }
+    private readonly ICountriesRepository _countriesRepository = countriesRepository ?? throw new ArgumentNullException(nameof(countriesRepository));
+    private readonly ILogger<CountriesBusiness> _logger = logger ?? throw new ArgumentNullException(nameof(logger));
 
     public async Task<IReadOnlyCollection<CountryInfo>> GetAllCountries()
     {

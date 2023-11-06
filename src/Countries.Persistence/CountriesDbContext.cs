@@ -3,12 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Countries.Persistence;
 
-public class CountriesDbContext : DbContext
+public class CountriesDbContext(DbContextOptions<CountriesDbContext> dbContextOptions) : DbContext(dbContextOptions)
 {
-
-    public CountriesDbContext(DbContextOptions<CountriesDbContext> dbContextOptions) : base(dbContextOptions)
-    {
-    }
-
     public DbSet<CountryInfo> CountriesInfo => Set<CountryInfo>();
 }

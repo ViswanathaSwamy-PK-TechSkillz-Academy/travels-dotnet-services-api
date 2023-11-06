@@ -6,17 +6,10 @@ using Microsoft.Extensions.Logging;
 
 namespace Countries.Repositories;
 
-public class CountriesRepository : ICountriesRepository
+public class CountriesRepository(CountriesDbContext countriesDbContext, ILogger<CountriesRepository> logger) : ICountriesRepository
 {
-    private readonly CountriesDbContext _countriesDbContext;
-    private readonly ILogger<CountriesRepository> _logger;
-
-    public CountriesRepository(CountriesDbContext countriesDbContext, ILogger<CountriesRepository> logger)
-    {
-        _countriesDbContext = countriesDbContext ?? throw new ArgumentNullException(nameof(countriesDbContext));
-
-        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-    }
+    private readonly CountriesDbContext _countriesDbContext = countriesDbContext ?? throw new ArgumentNullException(nameof(countriesDbContext));
+    private readonly ILogger<CountriesRepository> _logger = logger ?? throw new ArgumentNullException(nameof(logger));
 
     public async Task<IReadOnlyCollection<CountryInfo>> GetAllCountries()
     {
