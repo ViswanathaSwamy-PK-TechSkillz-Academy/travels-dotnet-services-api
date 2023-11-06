@@ -10,7 +10,7 @@ public static class CountriesEndpoints
 
     public static void MapCountriesEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup(CountriesRoutes.Prefix).WithTags(nameof(CountryInfo));
+        var group = routes.MapGroup(CountriesRoutes.Prefix).WithTags(nameof(CreateCountryInfoDto));
 
         _ = group.MapGet(CountriesRoutes.Root, async ([FromServices] ICountriesBusiness countriesBusiness) =>
         {
@@ -19,7 +19,7 @@ public static class CountriesEndpoints
         })
           .AllowAnonymous()
           .WithName("GetAllCountries")
-          .Produces<IReadOnlyCollection<CountryInfo>>(StatusCodes.Status200OK)
+          .Produces<IReadOnlyCollection<CreateCountryInfoDto>>(StatusCodes.Status200OK)
           .ProducesProblem(StatusCodes.Status500InternalServerError)
           .WithOpenApi();
     }

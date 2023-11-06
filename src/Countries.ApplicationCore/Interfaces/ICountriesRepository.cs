@@ -4,5 +4,5 @@ namespace Countries.ApplicationCore.Interfaces;
 
 public interface ICountriesRepository
 {
-    Task<IReadOnlyCollection<CountryInfo>> GetAllCountries();
+    Task<IReadOnlyCollection<CreateCountryInfoDto>> GetAllCountries();
 }

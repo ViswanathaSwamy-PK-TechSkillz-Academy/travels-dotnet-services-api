@@ -11,7 +11,7 @@ public class CountriesRepository(CountriesDbContext countriesDbContext, ILogger<
     private readonly CountriesDbContext _countriesDbContext = countriesDbContext ?? throw new ArgumentNullException(nameof(countriesDbContext));
     private readonly ILogger<CountriesRepository> _logger = logger ?? throw new ArgumentNullException(nameof(logger));
 
-    public async Task<IReadOnlyCollection<CountryInfo>> GetAllCountries()
+    public async Task<IReadOnlyCollection<CreateCountryInfoDto>> GetAllCountries()
     {
         _logger.LogInformation($"Starting CountriesRepository::GetAllCountries()");
 
