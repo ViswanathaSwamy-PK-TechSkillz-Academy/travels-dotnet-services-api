@@ -19,7 +19,7 @@ public static class CountriesEndpoints
         })
           .AllowAnonymous()
           .WithName("GetAllCountries")
-          .Produces<IReadOnlyCollection<CreateCountryInfoDto>>(StatusCodes.Status200OK)
+          .Produces<IReadOnlyCollection<CountryInfoDto>>(StatusCodes.Status200OK)
           .ProducesProblem(StatusCodes.Status500InternalServerError)
           .WithOpenApi();
     }

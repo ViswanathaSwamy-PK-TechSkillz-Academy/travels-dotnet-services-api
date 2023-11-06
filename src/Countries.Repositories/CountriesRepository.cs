@@ -18,7 +18,9 @@ public class CountriesRepository(CountriesDbContext countriesDbContext, ILogger<
     {
         _logger.LogInformation($"Starting CountriesRepository::GetAllCountries()");
 
-        return _mapper.Map<List<CountryInfoDto>>(await _countriesDbContext.CountriesInfo.ToListAsync());
+        var countries = await _countriesDbContext.CountriesInfo.ToListAsync();
+
+        return _mapper.Map<IReadOnlyCollection<CountryInfoDto>>(countries);
     }
 
     public async Task<CountryInfoDto> AddCountry(CreateCountryInfoDto createCountryInfoDto)

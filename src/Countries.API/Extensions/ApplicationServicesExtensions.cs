@@ -2,6 +2,7 @@
 using Countries.Business;
 using Countries.Persistence;
 using Countries.Repositories;
+using Countries.Repositories.Mappers;
 using Microsoft.EntityFrameworkCore;
 
 namespace Countries.API.Extensions;
@@ -22,6 +23,8 @@ public static class ApplicationServicesExtensions
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         _ = services.AddEndpointsApiExplorer();
         _ = services.AddSwaggerGen();
+
+        _ = services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 
         return services;
     }
