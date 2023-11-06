@@ -1,5 +1,5 @@
 ﻿using Countries.ApplicationCore.Interfaces;
-using Countries.Data.Entities;
+using Countries.Data.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using static Countries.ApplicationCore.Common.Constants;
 

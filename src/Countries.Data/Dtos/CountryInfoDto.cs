@@ -1,7 +1,9 @@
 ﻿namespace Countries.Data.Dtos;
 
-public record CreateCountryInfoDto
+public class CountryInfoDto
 {
+    public int CountryId { get; set; }
+
     public string? CountryName { get; set; }
 
     public string? CapitalState { get; set; }
