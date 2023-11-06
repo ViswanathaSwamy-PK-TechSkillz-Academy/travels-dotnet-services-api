@@ -6,5 +6,5 @@ public interface ICountriesRepository
 {
     Task<CountryInfoDto> AddCountry(CreateCountryInfoDto createCountryInfoDto);
 
-    Task<IReadOnlyCollection<CreateCountryInfoDto>> GetAllCountries();
+    Task<IReadOnlyCollection<CountryInfoDto>> GetAllCountries();
 }
