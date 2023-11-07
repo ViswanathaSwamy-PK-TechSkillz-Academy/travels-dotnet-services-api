@@ -26,6 +26,8 @@ public static class ApplicationServicesExtensions
 
         _ = services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 
+        _ = services.AddCors();
+
         return services;
     }
 
