@@ -11,6 +11,16 @@ public static class HttpRequestPipelineExtensions
         {
             app.UseSwagger();
             app.UseSwaggerUI();
+
+            app.UseCors(builder =>
+            {
+                builder
+                    .WithOrigins("http://localhost:3000") // Replace with your React app's origin
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials() // If your React app needs to include credentials (e.g., cookies) in requests
+                    .WithExposedHeaders("WWW-Authenticate"); // Add headers required for authentication
+            });
         }
 
         app.UseHttpsRedirection();
