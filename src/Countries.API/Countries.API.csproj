@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>false</InvariantGlobalization>
+    <UserSecretsId>6ca26048-Gimmicks-Travels</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
