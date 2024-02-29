@@ -1,6 +1,6 @@
 using Countries.API.Extensions;
 using Microsoft.EntityFrameworkCore;
-using static Countries.ApplicationCore.Common.Constants;
+//using static Countries.ApplicationCore.Common.Constants;
 
 var builder = WebApplication.CreateBuilder(args);
 
